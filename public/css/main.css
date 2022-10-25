@@ -1,0 +1,15 @@
+body {
+    height: 800px;
+    background-image: url("https://www.ionos.es/digitalguide/fileadmin/_processed_/2/e/csm_funktionale-programmierung-t_187637b286.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  #divParraf {
+    height:50px;
+    width:400px;
+    margin:100px auto;
+  }
+  
