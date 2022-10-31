@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // se define un puerto 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //motor de plantillas
 app.set('view engine', 'ejs');
@@ -30,3 +30,4 @@ app.get('/calculadora', (req, res) => {
 app.listen(port, () => {
     console.log('Servidor a su servicio en puerto:', port)
 })
+
