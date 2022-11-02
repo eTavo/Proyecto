@@ -1,0 +1,1 @@
+Se agrego enlace /mascotas el cual da la posibilidad de crear una nueva mascota redirigiendo a /mascotas/crear

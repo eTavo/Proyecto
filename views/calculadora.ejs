@@ -1,0 +1,36 @@
+<%- include("template/headers") %>
+
+<div class="jumbotron">
+    <h1 class="display-3 text-center p-3" style="color: white;">Calculadora para Freelance</h1>
+    <hr class="m-0" style="color:aquamarine"><br><br>
+    <p class="lead col-8 mx-auto text-center " style="color: white;"><b>Si usted es un programador freelance, sabiendo que muchas veces
+            las ofertas
+            laborales se expresan en valor hora, le traiga aqui la solución a saber cuanto va a cobrar por semana, mes y
+            año,
+            lo unico que necesitamos para empezar es saber el valor de la hora.</b></p><br><br><br>
+</div>
+<form action="", method='post'>
+    <fieldset class="input-group w-25 m-auto">
+        <div class="input-group w-75 m-auto">
+            <span class="input-group-text" id="addon-wrapping">u$d</span>
+            <input id="valor" name="cantidad" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group w-25 m-auto">
+            <button id="btn" type="button" class="btn btn-dark" onclick="calcular()" name="boton">Calcular</button>
+        </div>      
+    </fieldset>
+    <br><br><br>
+    <div class="input-group w-25 m-auto">
+        <span class="input-group-text w-25" id="addon-wrapping">Semana</span> 
+        <output id="semana" name="result" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
+    </div><br>
+    <div class="input-group w-25 m-auto">
+        <span class="input-group-text w-25" id="addon-wrapping">Mes</span> 
+        <output id="mes" name="result" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
+    </div><br>
+    <div class="input-group w-25 m-auto">
+        <span class="input-group-text w-25"  id="addon-wrapping">Año</span> 
+        <output id="anio" name="result" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
+    </div>   
+</form>
+
