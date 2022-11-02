@@ -2,7 +2,7 @@
 
 
 function calculo(){
-    console.log("cambio cualquiera");
+
     const valor = document.querySelector('.valor');
     const btn = document.getElementById('.btn')
     
