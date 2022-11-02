@@ -1,6 +1,13 @@
 //se llama a express 
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+//app.use(express.urlencoded({ extended: true }));
+//app.use(express.json());
+
 
 require('dotenv').config()
 
@@ -39,6 +46,6 @@ app.listen(port, () => {
     console.log('Servidor a su servicio en puerto:', port)
 })
 
-// https://www.youtube.com/watch?v=IpQSsb-1N1g&list=PLPl81lqbj-4IEnmCXEJeEXPepr8gWtsl6&index=14   10:12 min
+// https://www.youtube.com/watch?v=arvX_TitsCY&list=PLPl81lqbj-4IEnmCXEJeEXPepr8gWtsl6&index=16  8:21 min
 
 // https://nodejs-emmanuel.herokuapp.com/  ----> url de pagina en la nube
