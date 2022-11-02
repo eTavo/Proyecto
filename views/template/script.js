@@ -3,6 +3,8 @@
 
 function calculo(){
     
+    console.log("test branch");
+
     const valor = document.querySelector('.valor');
     const btn = document.getElementById('.btn')
     
