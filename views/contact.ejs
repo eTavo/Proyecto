@@ -1,0 +1,46 @@
+<%- include("template/headers") %>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr class="m-0" style="color:aquamarine"><br><br>
+
+<form id="formulario" class="row g-3 m-auto">
+    <div class="col-md-4">
+        <div class="input-group">
+            <span class="input-group-text" id="nombre">Nombre</span>
+            <input type="text" class="form-control" id="nombre" value="" required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <dinput class="input-group">
+            <span class="input-group-text" id="email">Contacto</span>
+            <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend2" value="" required>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="input-group">
+            <span class="input-group-text" id="motivo">Motivo</span>
+            <input type="text" class="form-control" id="motivo" required>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="input-group">
+            <select class="form-select" id="validationDefault04" required>
+                <option selected disabled value="">Entidad...</option>
+                <option value="1">Empresa</option>
+                <option value="2">Particular</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="input-group">
+            <span class="input-group-text" id="descripcion">Descripcion</span>
+            <textarea type="text" class="form-control" id="descripcion" aria-label="With textarea" value="" required></textarea>    
+        </div>
+    </div>
+    
+    <div class="col-1">
+        <button class="btn btn-primary btn-dark" type="submit">Enviar</button>
+    </div>
+</form>

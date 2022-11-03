@@ -7,9 +7,27 @@ body {
     background-attachment: fixed;
   }
   
-  #divParraf {
-    height:50px;
-    width:400px;
-    margin:100px auto;
+#divParraf {
+  height:50px;
+  width:400px;
+  margin:100px auto;
+}
+  
+#formulario{
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
+
+textarea {
+  overflow: scroll;
+  height: 80px;
+  width: 100%;
+  resize: none;
+}
+
+
   
