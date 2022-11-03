@@ -3,8 +3,7 @@ const Schema = mongoose.Schema;
 
 const contactoSchema = new Schema({
     nombre: String,
-    contacto: String,
-    mail: String,    
+    contacto: String, 
     motivo: String,
     entidad: String,
     descripcion: String

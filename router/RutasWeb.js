@@ -17,8 +17,8 @@ router.get('/calculadora', (req, res) => {
     res.render("calculadora")
 })
 
-router.get('/contact', (req, res) => {
-    res.render("contact")
-})
+//router.get('/contact', (req, res) => {
+//    res.render("contact")
+//})
 
 module.exports = router;

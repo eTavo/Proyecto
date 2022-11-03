@@ -34,7 +34,8 @@ app.use(express.static(__dirname + "/public"));
 
 //rutas web
 app.use('/', require('./router/RutasWeb'));
-app.use('/mascotas', require('./router/Mascotas'));
+//app.use('/mascotas', require('./router/Mascotas'));
+app.use('/contact', require('./router/Contacto'));
 
 app.use((req,res,next) => {
     res.status(404).render("404", {

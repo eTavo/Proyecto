@@ -5,12 +5,18 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-  }
-  
+}
+
 #divParraf {
   height:50px;
   width:400px;
   margin:100px auto;
+}
+
+#parrafContact {
+  height:50px;
+  width:700px;
+  margin:50px auto;
 }
   
 #formulario{
