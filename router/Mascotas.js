@@ -29,4 +29,26 @@ router.get('/crear', (req, res) => {
     res.render('crear')
 })
 
+// agrega datos a la base y los muestra en enlace
+router.post('/', async(req, res) => {
+    const body = req.body
+    try {
+        //------  metodo 1 ---------
+
+        // crea modelo de Mascota
+        //const mascotaDB = new Mascota(body)
+        // guarda en la base de dato
+        //await mascotaDB.save()
+
+        //------  metodo 2 ---------
+        // espera que se cree el documento en mongodb
+        await Mascota.create(body)
+        // redirecciona la carga a la vista de mascotas
+        res.redirect('/mascotas')
+
+    } catch (error) {
+        console.log(body)
+    }
+})
+
 module.exports = router;

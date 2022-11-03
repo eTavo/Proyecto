@@ -17,6 +17,7 @@ const port = process.env.PORT || 3000;
 //conexion a base de datos
 const mongoose = require('mongoose');
 
+//const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.iyn5zgg.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.iyn5zgg.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(uri,
