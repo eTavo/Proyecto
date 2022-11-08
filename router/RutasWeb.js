@@ -13,9 +13,9 @@ router.get('/programs', (req, res) => {
     res.render("programs")
 })
 
-//router.get('/calculadora', (req, res) => {
-//    res.render("calculadora")
-//})
+router.get('/calculadora', (req, res) => {
+    res.render("calculadora")
+})
 
 //router.get('/contact', (req, res) => {
 //    res.render("contact")
