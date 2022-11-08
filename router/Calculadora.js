@@ -1,21 +1,56 @@
+// FUNCIONA CON BASE DE MONGO
 const express = require('express');
 const router = express.Router();
 
-const Valor = require('/calculadora');
+const Calculadora = require('../models/calcula')
 
+router.get('/', async(req,res) => {
 
-router.post('/', async(req, res) => {
-    const body = req.form
-    try {
-        //------  metodo 2 ---------
-        // espera que se cree el documento en mongodb
-        await Valor.create(body);
-        // redirecciona la carga a la vista de mascotas
-        res.redirect('/calculadora')
+    try{
 
-    } catch (error) {
-        console.log(body)
+        const arrayCalculadorasEST = await Calculadora.find()
+        console.log(arrayCalculadorasEST)
+        
+        res.render('calculadora', {
+
+            arrayCalculadora : arrayCalculadorasEST
+        })
+
+    }catch (error){
+        console.log(error)
     }
 })
 
+
+router.post('/', async(req,res) => {
+    const body = req.body
+    const valor = body.valor
+    const horas = body.horas
+    const dias = body.dias
+
+    const dia = valor * horas
+    const semana = dia * dias
+    const mes = semana * 4
+    const anio = mes * 12
+
+    var viewData = {
+        "semana": semana,
+        "mes": mes,
+        "anio": anio
+    };
+    
+    try {
+
+        await Calculadora.create(viewData)
+      
+        res.redirect('/calculadora')
+
+    } catch (error) {
+        console.log(error)
+    }
+    
+})
+
 module.exports = router;
+
+

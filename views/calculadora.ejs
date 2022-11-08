@@ -10,17 +10,26 @@
             lo unico que necesitamos para empezar es saber el valor de la hora.</b></p><br>
 </div>
 
-<form action="" method="post" class="input-group w-25 m-auto">
-    <span class="form-control my-2" >u$d</span>
+
+<form action="/calculadora" method="post" class="input-group w-25 m-auto">
+    
+    <span class="input-group-text my-2" >u$d</span>
     <input 
         type="number"
         placeholder="0.00"
         class="form-control my-2"
         name="valor"
         required
+    > 
+    <span class="input-group-text my-2">Hs</span>
+    <input 
+        type="number"
+        placeholder="0"
+        class="form-control my-2"
+        name="horas"
+        required 
     >
-    <span class="m-2"></span>
-    <span class="form-control my-2">Dias</span>
+    <span class="input-group-text my-2">Dias</span>
     <input 
         type="number"
         placeholder="0"
@@ -28,21 +37,63 @@
         name="dias"
         required
     >
-    <button class="btn btn-success btn-block  w-75 m-auto" type="submit">
+    
+    <button class="btn btn-success btn-block w-100 my-2" type="submit">
         Calcular
-    </button>   
+    </button>  
+    
 </form>
-<br>
 
-<div class="input-group w-25 m-auto">
-    <span class="input-group-text w-25"  id="addon-wrapping">Semana</span> 
-    <output name="semana" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
-</div> <br>
-<div class="input-group w-25 m-auto">
-    <span class="input-group-text w-25"  id="addon-wrapping">Mes</span> 
-    <output name="mes" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
-</div> <br>
-<div class="input-group w-25 m-auto">
-    <span class="input-group-text w-25"  id="addon-wrapping">Año</span> 
-    <output id="anio" name="result" type="number" class="form-control" placeholder="0.00" aria-label="valorH" aria-describedby="addon-wrapping" >
-</div>  
+
+<form action="/calculadora" name="envia" method="post" class="form-control bg-dark w-25 m-auto">
+    <% if (arrayCalculadora.length > 0) { %>
+        <% arrayCalculadora.forEach(element => { %>
+            <div class="input-group">
+                <span class="input-group-text w-25 my-2">Semana</span> 
+                <output name="semana" type="number" class="form-control my-2" placeholder="0.00" ><%= element.semana %> </output>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text w-25 my-2">Mes</span> 
+                <output name="mes" type="number" class="form-control my-2" placeholder="0.00"><%= element.mes %> </output>
+            </div>
+            <div class="input-group ">
+                <span class="input-group-text w-25 my-2">Año</span> 
+                <output name="anio" type="number" class="form-control my-2" placeholder="0.00"><%= element.anio %> </output>
+            </div>
+        <% }) %>
+    <% } %>
+    
+</form>
+
+
+
+<!--   EJEMPLO
+<span>Valor #1</span>
+    <input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
+    <br>
+<span>Valor #2</span>
+    <input type="text" id="txt_campo_2" onchange="sumar(this.value);" />
+    <br>
+<span>Valor #3</span>
+    <input type="text" id="txt_campo_3" onchange="sumar(this.value);" />
+    <br>
+<span>El resultado es: </span> <span id="spTotal"></span>
+
+<script>
+    function sumar (valor) {
+        var total = 0;	
+        valor = parseInt(valor); // Convertir el valor a un entero (número).
+        
+        total = document.getElementById('spTotal').innerHTML;
+        
+        // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
+        total = (total == null || total == undefined || total == "") ? 0 : total;
+        
+        // Esta es la suma. 
+        total = (parseInt(total) + parseInt(valor));
+        
+        // Colocar el resultado de la suma en el control "span".
+        document.getElementById('spTotal').innerHTML = total;
+    }
+</script>
+-->

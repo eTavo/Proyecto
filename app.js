@@ -34,8 +34,9 @@ app.use(express.static(__dirname + "/public"));
 
 //rutas web
 app.use('/', require('./router/RutasWeb'));
-//app.use('/mascotas', require('./router/Mascotas'));
+app.use('/mascotas', require('./router/Mascotas'));
 app.use('/contact', require('./router/Contacto'));
+app.use('/calculadora', require('./router/Calculadora'));
 
 app.use((req,res,next) => {
     res.status(404).render("404", {
@@ -51,3 +52,7 @@ app.listen(port, () => {
 // https://www.youtube.com/watch?v=arvX_TitsCY&list=PLPl81lqbj-4IEnmCXEJeEXPepr8gWtsl6&index=16  8:21 min
 
 // https://nodejs-emmanuel.herokuapp.com/  ----> url de pagina en la nube
+
+// //https://www.youtube.com/watch?v=JPwgudgV6DA
+
+// https://es.stackoverflow.com/questions/20276/suma-de-inputs-con-resultado-autom%C3%A1tico

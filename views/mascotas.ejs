@@ -31,3 +31,23 @@
         Crear mascota
     </a>
 </div>
+
+<form class="form-control bg-dark w-25 m-auto">
+    <% if (arrayMascotas.length > 0) { %>
+        <% arrayMascotas.forEach(mascotas => { %>       
+            <div class="input-group">
+                <span class="input-group-text w-25 my-2">Semana</span> 
+                <output type="text" class="form-control my-2"><%= mascotas.id %></output>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text w-25 my-2">Mes</span> 
+                <output type="text" class="form-control my-2"><%= mascotas.nombre %></output>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text w-25 my-2">Año</span> 
+                <output type="text" class="form-control my-2"><%= mascotas.descripcion %></output>
+            </div>
+        <% }) %>
+    <% } %>    
+</form>
+
