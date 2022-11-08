@@ -2,7 +2,7 @@
 
 <div class="jumbotron">
     <h1 class="display-3 text-center p-3" style="color: rgb(0, 0, 0);"><b>Calculadora para Freelance</b></h1>
-    <hr class="m-0" style="color:rgb(0, 0, 0)"><br><br>
+    <hr class="m-0" style="color:rgb(0, 0, 0)"><br>
     <p class="lead col-8 mx-auto text-center " style="color: rgb(0, 0, 0);"><b>Si usted es un programador freelance, sabiendo que muchas veces
             las ofertas
             laborales se expresan en valor hora, le traiga aqui la solución a saber cuanto va a cobrar por semana, mes y
@@ -10,19 +10,20 @@
             lo unico que necesitamos para empezar es saber el valor de la hora.</b></p><br>
 </div>
 
-<div class="container text-center w-25 bg-dark">
+<div class="container-sm w-25 bg-dark m-auto">
 
-    <form class="input-group w-100 m-auto">
-    
-        <span class="input-group-text my-2" >u$d</span>
+    <form class="row w-75 m-auto">
+        
+
+        <span class="input-group-text w-25 my-2" >u$d</span>
         <input 
             type="number"
             placeholder="0.00"
-            class="form-control w-25 my-2"
+            class="form-control w-75 my-2"
             id="valor"
             required
         > 
-        <span class="input-group-text my-2">Hs</span>
+        <span class="input-group-text w-25 my-2">Hs</span>
         <input 
             type="number"
             placeholder="0"
@@ -37,20 +38,22 @@
             class="form-control w-25 my-2"
             id="dias"
             required
-        > 
-    
-        <input class="btn btn-success btn-block w-100 my-2" type="button" onclick="calcular()" value="Calcular">
-     
-        <span class="input-group-text w-25 my-2">Semana</span>
-        <output name="semana" type="number" class="form-control w-75 my-2" id="semana" ></output>
-    
-        <span class="input-group-text w-25 my-2">Mes</span>
-        <output name="semana" type="number" class="form-control w-75 my-2" id="mes" ></output>
-    
-        <span class="input-group-text w-25 my-2">Año</span>
-        <output name="semana" type="number" class="form-control w-75 my-2" id="anio" ></output>
-    </form>
+        >       
 
+        <hr class="m-0" style="color:rgb(255, 255, 255)">   
+        <input class="btn btn-danger btn-block w-50 m-auto my-2" type="Reset" value="Borrar">   
+        <input class="btn btn-success btn-block w-50 my-2" type="button" onclick="calcular()" value="Calcular">     
+        <hr class="m-0" style="color:rgb(255, 255, 255)">
+
+        <span class="input-group-text w-50 my-2">Semana</span>
+        <output name="semana" type="number" class="form-control w-50 my-2" id="semana" ></output>
+    
+        <span class="input-group-text w-50 my-2">Mes</span>
+        <output name="semana" type="number" class="form-control w-50 my-2" id="mes" ></output>
+    
+        <span class="input-group-text w-50 my-2">Año</span>
+        <output name="semana" type="number" class="form-control w-50 my-2" id="anio" ></output>
+    </form>
 </div>
 
 
