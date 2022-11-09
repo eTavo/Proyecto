@@ -1,6 +1,6 @@
 body {
   height: 500px;
-  background-image: url("https://www.mediasource.mx/hubfs/blog-files/fondos-web.jpg");
+  background-image: url('../img/fondo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -14,7 +14,7 @@ body {
 }
 
 #parrafContact {
-  background-image:url('/img/cmd.jpg');
+  background-image:url('../img/cmd.jpg');
   height: 250px;
   opacity: 0.95;
   background-size: cover;

@@ -2,7 +2,9 @@
 
 <div class="container text-center">
   
-    <h1 class="text-center my-5"><b><u>CRUD Mongo</u></b></h1>
+    <form class="form-control bg-dark w-50 m-auto my-5 ">
+        <h1 class="text-center  my-2" style="color: rgb(255, 150, 22);"><b><u>CRUD Mongo</u></b></h1>
+    </form>
     
     <table class="table table-dark table-hover w-75 m-auto">
         <thead>
@@ -21,33 +23,14 @@
                         <th scope="row"><%= mascotas.id %></th>
                         <td><%= mascotas.nombre %></td>
                         <td><%= mascotas.descripcion %></td>
-                        <td>Accion</td>
+                        <td> <a href="mascotas/<%= mascotas.id %>", class="btn btn-warning bt-sm">Editar</a> </td>
                     </tr>
                 <% }) %>
             <% } %>           
         </tbody>
     </table>   <br>
-    <a class="btn btn-success btn-block my-4 " href="/mascotas/crear" >
+    <a class="btn btn-success btn-block my-4 " href="/mascotas/crear">
         Crear mascota
     </a>
 </div>
-
-<form class="form-control bg-dark w-25 m-auto">
-    <% if (arrayMascotas.length > 0) { %>
-        <% arrayMascotas.forEach(mascotas => { %>       
-            <div class="input-group">
-                <span class="input-group-text w-25 my-2">Semana</span> 
-                <output type="text" class="form-control my-2"><%= mascotas.id %></output>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text w-25 my-2">Mes</span> 
-                <output type="text" class="form-control my-2"><%= mascotas.nombre %></output>
-            </div>
-            <div class="input-group">
-                <span class="input-group-text w-25 my-2">Año</span> 
-                <output type="text" class="form-control my-2"><%= mascotas.descripcion %></output>
-            </div>
-        <% }) %>
-    <% } %>    
-</form>
 

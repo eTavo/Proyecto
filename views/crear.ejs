@@ -1,9 +1,12 @@
 <%- include("template/headers") %>
 
-<div class="cointainer w-75 m-auto">
+<div class="cointainer w-50 m-auto">
     
-    <h1 class="text-center m-2">Crear</h1>
-    <form action="/mascotas" method="post" class="form-control w-75 m-auto">
+    <form class="form-control bg-dark m-auto w-50 my-5">      
+        <h2 class="text-center"><b> <u style="color: rgb(255, 209, 41);">Crear Mascota</u> </b></h2>  
+    </form>
+
+    <form action="/mascotas" method="post" class="form-control bg-dark w-50 m-auto">
         <input 
             type="text"
             placeholder="Agregar nombre"
@@ -16,7 +19,7 @@
             class="form-control my-2"
             name="descripcion"
         >
-        <button class="btn btn-success btn-block w-100" type="submit">
+        <button class="btn btn-success btn-block w-100 my-3" type="submit">
             Agregar
         </button>
     </form>
